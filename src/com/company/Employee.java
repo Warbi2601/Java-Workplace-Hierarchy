@@ -10,6 +10,7 @@ public class Employee {
     private int managerID;
     private int hierarchyLevel;
     private double cumulativeSalary;
+    private boolean isPrinted;
     List<Employee> teamMemberList;
 
     public Employee(String name, int ID, double salary, int managerID)
@@ -79,6 +80,14 @@ public class Employee {
 
     public void setCumulativeSalary(double cumulativeSalary) {
         this.cumulativeSalary = cumulativeSalary;
+    }
+
+    public boolean getIsPrinted() {
+        return this.isPrinted;
+    }
+
+    public void setIsPrinted(boolean isPrinted) {
+        this.isPrinted = isPrinted;
     }
 
 }
