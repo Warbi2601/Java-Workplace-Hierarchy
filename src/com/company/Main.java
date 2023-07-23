@@ -35,6 +35,9 @@ public class Main {
                 }
             }
         }
+        System.out.println(topOfHierarchy.get(0).getName());
+        System.out.println(topOfHierarchy.get(0).getTeamMemberList());
+        System.out.println(topOfHierarchy.get(0).totalEmployeesDelegated());
     }
 
     private static boolean ReadCSVFile() {
