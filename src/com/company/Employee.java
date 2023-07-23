@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Employee {
+public class Employee implements Delegate {
     private String name;
     private int ID;
     private double salary;
@@ -89,5 +89,19 @@ public class Employee {
     public void setIsPrinted(boolean isPrinted) {
         this.isPrinted = isPrinted;
     }
+
+	@Override
+	public int totalEmployeesDelegated() {
+		int i = 0;
+		if(teamMemberList == null) {
+			return 1;
+		}
+		for(Employee e: teamMemberList) {
+			
+			i += e.totalEmployeesDelegated();
+		}
+		
+		return i;
+	}
 
 }
